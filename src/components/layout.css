@@ -45,9 +45,37 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .anna-ja-emma {
-  border-top: 2px solid var(--mainYellow);
-  border-bottom: 2px solid var(--mainYellow);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1 !important; /*added otherwise overlay wouldn't display*/
+  background: rgba(24, 15, 0, 0.8);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+.anna-ja-emma h1{
+  border-top: 2.5px solid var(--mainYellow);
+  border-bottom: 2.5px solid var(--mainYellow);
+}
+
+.about-background {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1 !important; /*added otherwise overlay wouldn't display*/
+  background: rgba(24, 15, 0, 0.8);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
 
 .btn-yellow {
   color: var(--mainBrown);

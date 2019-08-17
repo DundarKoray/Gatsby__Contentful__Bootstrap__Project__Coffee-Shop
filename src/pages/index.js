@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import BackgroundSection from '../components/Global/BackgroundSection'
+import Info from '../components/Home/Info'
 
 const IndexPage = ({data}) => (
   
@@ -14,6 +15,7 @@ const IndexPage = ({data}) => (
       title1="Anna & Emma" 
       title2="kahvi roastery"
     />
+    <Info/>
   </Layout>
 );
 

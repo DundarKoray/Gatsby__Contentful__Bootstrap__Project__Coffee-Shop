@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
 :root{
-  --mainBrown: #2d1ef1;
+  --mainBrown: #2d1e1f;
   --mainYellow: rgb(105, 64, 3);
+  --lightYellow: rgb(255, 238, 0);
   --mainGrey:  #ece8dc;
   --mainWhite: #fff;
   --mainDark: #222;
@@ -11,8 +12,8 @@
 
 body {
   background: var(--mainWhite);
-  color: var(--mainDark);¨
-  font-family: 'Raleway', sans-serif;
+  color: var(--mainDark);
+  font-family: 'Raleway', sans-serif !important;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -45,4 +46,14 @@ h1,h2,h3,h4,h5,h6 {
 .anna-ja-emma {
   border-top: 2px solid rgb(255, 238, 0);
   border-bottom: 2px solid rgb(255, 238, 0);
+}
+
+.btn-yellow {
+  color: var(--mainDark);
+  border-color: var(--mainYellow);
+}
+
+.btn-yellow:hover {
+  background: var(--mainYellow);
+  color: var(--mainWhite);
 }

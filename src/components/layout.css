@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
 :root{
-  --mainBrown: #2d1e1f;
-  --mainYellow: rgb(105, 64, 3);
-  --lightYellow: rgb(255, 238, 0);
+  --mainBrown: rgb(45, 30, 31);
+  --lightBrown: rgb(105, 64, 3);
+  --mainYellow: #f5d600;
   --mainGrey:  #ece8dc;
   --mainWhite: #fff;
   --mainDark: #222;
@@ -37,23 +37,29 @@ h1,h2,h3,h4,h5,h6 {
   align-items: center;
   justify-content: center;
   opacity: 1 !important; /*added otherwise overlay wouldn't display*/
-  background: rgba(24, 15, 0, 0.7);
+  background: rgba(24, 15, 0, 0.8);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .anna-ja-emma {
-  border-top: 2px solid rgb(255, 238, 0);
-  border-bottom: 2px solid rgb(255, 238, 0);
+  border-top: 2px solid var(--mainYellow);
+  border-bottom: 2px solid var(--mainYellow);
 }
 
 .btn-yellow {
-  color: var(--mainDark);
+  color: var(--mainBrown);
   border-color: var(--mainYellow);
 }
 
 .btn-yellow:hover {
-  background: var(--mainYellow);
+  background: var(--mainBrown);
   color: var(--mainWhite);
+  border-color: var(--mainBrown);
+}
+
+.footer {
+  background: var(--mainBrown);
 }

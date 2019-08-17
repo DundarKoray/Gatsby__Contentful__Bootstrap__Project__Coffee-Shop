@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700&display=swap")
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
 :root{
   --mainBrown: #2d1ef1;
@@ -11,7 +12,7 @@
 body {
   background: var(--mainWhite);
   color: var(--mainDark);¨
-  font-family: 'Verdana', 'Geneva', 'Tahoma', 'sans-serif' !important;
+  font-family: 'Raleway', sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -35,8 +36,13 @@ h1,h2,h3,h4,h5,h6 {
   align-items: center;
   justify-content: center;
   opacity: 1 !important; /*added otherwise overlay wouldn't display*/
-  background: rgba(32, 20, 1, 0.5);
+  background: rgba(24, 15, 0, 0.7);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.anna-ja-emma {
+  border-top: 2px solid rgb(255, 238, 0);
+  border-bottom: 2px solid rgb(255, 238, 0);
 }

@@ -28,7 +28,9 @@ class Menu extends Component {
                         {this.state.coffeeItems.map(({node})=>{
                             return(
                                 <div key={node.id} className="col-11 col-md-6 my-3 d-flex mx-auto">
-                                    <Img fixed={node.image.fixed}/>
+                                    <div>
+                                        <Img fixed={node.image.fixed}/>
+                                    </div>
                                     
                                     <div className="flex-grow-1 px-3">
                                         <div className="d-flex justify-content-between">

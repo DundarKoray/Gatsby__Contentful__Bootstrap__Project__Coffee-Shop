@@ -22,10 +22,24 @@ class Menu extends Component {
             <section className="menu py-5">
                 <div className="container">
                     <Title title="most popular items"/>
-                    <div className="row mb-5">
-                        <div className="col text-center">
-                           <h3>There are items to display</h3> 
-                        </div>
+                    {/* categories */}
+                    {/* items */}
+                    <div className="row">
+                        {this.state.coffeeItems.map(({node})=>{
+                            return(
+                                <div key={node.id} className="col-11 col-md-6 my-3 d-flex mx-auto">
+                                    <Img fixed={node.image.fixed}/>
+                                    
+                                    <div className="flex-grow-1 px-3">
+                                        <div className="d-flex justify-content-between">
+                                            <h6 className="mb-0">{node.title}</h6>
+                                            <h6 className="mb-0">€{node.price}</h6>
+                                        </div>
+                                        <p className="text-muted"> <small>{node.description.description}</small></p>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
 

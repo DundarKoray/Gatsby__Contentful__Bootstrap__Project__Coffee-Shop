@@ -71,17 +71,12 @@ class Menu extends Component {
                     <div className="row">
                         {this.state.coffeeItems.map(({node})=>{
                             return(
-                                <div key={node.id} className="col-11 col-md-6 my-3 d-flex mx-auto">
-                                    <div>
-                                        <Img fixed={node.image.fixed}/>
-                                    </div>
-                                    
+                                <div key={node.id} className="col-11 col-md-6 my-3 d-flex">
                                     <div className="flex-grow-1 px-3">
-                                        <div className="d-flex justify-content-between">
+                                        <div className="d-flex justify-content-between ">
                                             <h6 className="mb-0">{node.title}</h6>
                                             <h6 className="mb-0">€{node.price.toFixed(2)}</h6>
                                         </div>
-                                        <p className="text-muted"> <small>{node.description.description}</small></p>
                                     </div>
                                 </div>
                             )

@@ -37,17 +37,8 @@ export const query = graphql `
       node {
         id
         title
-        description{
-          description
-        }
         price
         category
-        image{
-          fixed(width: 150, height: 150){
-            ...GatsbyContentfulFixed_tracedSVG
-            
-          }
-        }
       }
     }
   }

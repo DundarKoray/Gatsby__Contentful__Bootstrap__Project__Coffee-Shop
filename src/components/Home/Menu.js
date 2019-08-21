@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import Title from '../Global/Title'
 import Img from 'gatsby-image'
 
+//this function gets unique values, how many different categories we have etc "tea" and "coffee"
+const getCategories = (items) => {
+    let tempItems = items.map(item =>{
+        return item.node.category //  // returns all the categories
+    })
+    let tempCategories = new Set (tempItems) // return uniquie categories inside an object
+    let categories = Array.from(tempCategories) //Array.from() converts object into an array
+    categories = ["all", ...categories] // we add "all" into categories array
+    return categories 
+}
 
 class Menu extends Component {
     constructor(props){
@@ -11,18 +21,52 @@ class Menu extends Component {
 
         this.state = {
             items: props.items.edges,
-            coffeeItems: props.items.edges
+            coffeeItems: props.items.edges,
+            categories: getCategories(props.items.edges)
         }
     }
-
+    handleItems = (category) => {
+        // console.log(category)
+        let tempItems = [...this.state.items]
+        if(category === "all"){
+            this.setState(()=>{
+                return {coffeeItems: tempItems}
+            })
+        }
+        else{
+            let items = tempItems.filter(({node})=>node.category
+            === category)
+            this.setState(()=>{
+                return {coffeeItems: items}
+            })
+        }
+    }
     render() {
-
+        // console.log(this.state.categories)
         return (
             this.state.items.length>0 ?
             <section className="menu py-5">
                 <div className="container">
                     <Title title="most popular items"/>
                     {/* categories */}
+                    <div className="row mb-5">
+                        <div className="col-10 mx-auto text-center">
+                            {this.state.categories.map((category, index)=>{
+                                return (
+                                    <button 
+                                        type="button" 
+                                        key={index} 
+                                        className="btn btn-yellow text-capitalize m-3" 
+                                        onClick={()=> {
+                                            this.handleItems(category)
+                                        }}
+                                    >
+                                        {category}
+                                    </button>
+                                )
+                            })}
+                        </div>
+                    </div>
                     {/* items */}
                     <div className="row">
                         {this.state.coffeeItems.map(({node})=>{

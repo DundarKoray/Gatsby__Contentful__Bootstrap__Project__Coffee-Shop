@@ -82,6 +82,16 @@ h1,h2,h3,h4,h5,h6 {
   border-color: var(--mainYellow);
 }
 
+.btn-brown {
+  color: var(--mainWhite);
+  background: var(--mainBrown);
+}
+
+.btn-brown:hover {
+  background: var(--mainYellow);
+  color: var(--mainBrown);
+}
+
 .btn-yellow:hover {
   background: var(--mainBrown);
   color: var(--mainWhite);

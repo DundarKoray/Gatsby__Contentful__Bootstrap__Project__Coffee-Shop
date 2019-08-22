@@ -30,9 +30,17 @@ const Products = () => {
                     <div className="container">
                         <Title title="our products"/>
                         <div className="row">
-                            {data.products.edges.map(({node:product})=>{
+                            {data.products.edges.slice(0,4).map(({node:product})=>{
                                 return <Product key={product.id} product={product} />
                             })}
+                        </div>
+                        <div className="row">
+                            <div className="col text-center">
+                             <button className="btn btn-brown mt-3 text-uppercase">
+                                see all products
+                            </button>
+
+                            </div>
                         </div>
                     </div>
                 </section>

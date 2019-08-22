@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Title from '../Global/Title'
-import Img from 'gatsby-image'
+
 
 //this function gets unique values, how many different categories we have etc "tea" and "coffee"
 const getCategories = (items) => {

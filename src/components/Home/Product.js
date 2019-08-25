@@ -9,7 +9,14 @@ const Product = ({product}) => {
                <div className="card-body py-0 px-0">
                    <h6>{product.title}</h6>
                    <h6>€{product.price.toFixed(2)}</h6>
-                   <button className="btn btn-yellow mt-3 text-capitalize">
+                   <button 
+                        className="btn btn-yellow mt-3 text-capitalize snipcart-add-item" 
+                        data-item-id={product.id}
+                        data-item-name={product.title}
+                        data-item-price={product.price}
+                        data-item-url="https://determined-rosalind-9a7f73.netlify.com/"
+                        data-item-image={product.image.fixed.src}
+                    >
                        add to cart
                    </button>
                </div>

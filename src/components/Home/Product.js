@@ -14,7 +14,7 @@ const Product = ({product}) => {
                         data-item-id={product.id}
                         data-item-name={product.title}
                         data-item-price={product.price}
-                        data-item-url="https://determined-rosalind-9a7f73.netlify.com/#!/"
+                        data-item-url="https://determined-rosalind-9a7f73.netlify.com"
                         data-item-image={product.image.fixed.src}
                     >
                        add to cart

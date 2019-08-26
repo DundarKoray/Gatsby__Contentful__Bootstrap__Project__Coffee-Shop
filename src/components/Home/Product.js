@@ -8,7 +8,7 @@ const Product = ({product}) => {
                <Img fixed={product.image.fixed}/>
                <div className="card-body py-0 px-0">
                    <h6>{product.title}</h6>
-                   <h6>€{product.price.toFixed(2)}</h6>
+                   <h6>€{product.price}</h6>
                    <button 
                         className="btn btn-yellow mt-3 text-capitalize snipcart-add-item" 
                         data-item-id={product.id}
